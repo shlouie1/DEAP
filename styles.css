@@ -1,0 +1,537 @@
+/* Dark navy theme with green accents, matched to the KTx-CONNECT screenshots.
+   Layout and card sizes are unchanged. */
+:root {
+  --bg: #0f172a;
+  --card: #1e293b;
+  --card-alt: #172036;
+  --field: #0f1a2e;
+  --text: #f1f5f9;
+  --muted: #94a3b8;
+  --line: #334155;
+  --primary: #4ade80;
+  --primary-dark: #22c55e;
+  --accent-blue: #1e3a5f;
+  --accent-blue-line: #3b82f6;
+  --eyebrow: #4ade80;
+  --warn: #fbbf24;
+  --ok: #4ade80;
+  --error: #f87171;
+  --radius: 10px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.skip-link {
+  position: absolute;
+  left: -999px;
+}
+
+.skip-link:focus {
+  left: 16px;
+  top: 8px;
+  background: var(--card);
+  color: var(--text);
+  padding: 8px;
+  z-index: 1;
+}
+
+.app-header h1 {
+  font-size: 1.5rem;
+  margin: 8px 0 4px;
+}
+
+.app-header h1 span {
+  color: var(--primary);
+}
+
+/* Small green eyebrow above each card heading, as in the KTx-CONNECT screenshots. */
+.card > h2 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.card > h2::before {
+  content: attr(data-eyebrow);
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--eyebrow);
+  margin-bottom: 2px;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.small {
+  font-size: 0.9rem;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.role-nav,
+.status-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.role-nav {
+  margin: 12px 0;
+}
+
+.status-buttons {
+  margin: 8px 0 16px;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 16px;
+  margin-bottom: 16px;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.card h2,
+.card h3 {
+  margin-top: 0;
+}
+
+.barrier-grid {
+  display: grid;
+  gap: 16px;
+}
+
+@media (min-width: 720px) {
+  .barrier-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.btn {
+  min-height: 44px;
+  padding: 8px 14px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--card-alt);
+  color: var(--text);
+  font: inherit;
+  cursor: pointer;
+}
+
+.btn:hover {
+  border-color: var(--primary);
+}
+
+.btn-primary {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #0f172a;
+}
+
+.btn-primary:hover {
+  background: var(--primary-dark);
+}
+
+.btn-quiet {
+  background: transparent;
+}
+
+.btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+[aria-pressed="true"] {
+  background: var(--accent-blue);
+  border-color: var(--primary);
+  font-weight: 600;
+}
+
+.btn:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+input:focus-visible {
+  outline: 3px solid var(--accent-blue-line);
+  outline-offset: 2px;
+}
+
+.worklist {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.worklist-item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 0;
+  border-top: 1px solid var(--line);
+}
+
+.worklist-item:first-child {
+  border-top: 0;
+}
+
+.action {
+  display: block;
+  color: var(--warn);
+  font-weight: 600;
+}
+
+.action.ok {
+  color: var(--ok);
+}
+
+label {
+  display: block;
+  margin: 10px 0;
+  font-weight: 600;
+}
+
+textarea,
+input[type="date"],
+select {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  font: inherit;
+  padding: 8px;
+  margin-top: 4px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--field);
+}
+
+select,
+input[type="date"] {
+  min-height: 44px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.notice {
+  padding: 10px 12px;
+  border-radius: 8px;
+}
+
+.notice-ok {
+  background: rgba(74, 222, 128, 0.12);
+  color: var(--ok);
+}
+
+.notice-error {
+  background: rgba(248, 113, 113, 0.12);
+  color: var(--error);
+}
+
+@media (max-width: 560px) {
+  .container {
+    padding: 12px;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .role-nav .btn,
+  .status-buttons .btn {
+    width: auto;
+    flex: 1 1 auto;
+  }
+}
+
+/* v2: barrier checklist (patient and caregiver, answered separately) */
+.bat-item {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 8px 12px;
+  margin: 0 0 8px;
+  min-width: 0;
+}
+
+.bat-item legend {
+  font-weight: 600;
+  padding: 0 4px;
+  overflow-wrap: anywhere;
+}
+
+.yn-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.yn-option {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 44px;
+  padding: 0 12px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--field);
+}
+
+.yn-option label {
+  margin: 0;
+  font-weight: 400;
+}
+
+.yn-option input {
+  width: 18px;
+  height: 18px;
+  margin: 0;
+}
+
+.bat-summary {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.bat-row {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 10px 8px;
+  border-top: 1px solid var(--line);
+}
+
+.bat-row.disagree {
+  background: rgba(251, 191, 36, 0.12);
+  border-left: 4px solid var(--warn);
+}
+
+.bat-answers {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+@media (max-width: 560px) {
+  .yn-option {
+    flex: 1 1 100%;
+  }
+}
+
+/* v4: horizontal rules between sections, aligned rows, and editable plan steps. */
+.section-rule {
+  border: 0;
+  border-top: 1px solid var(--line);
+  margin: 12px 0;
+}
+
+.schedule-card .schedule {
+  display: block;
+}
+
+.schedule-row {
+  display: grid;
+  grid-template-columns: 90px 1fr auto;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.schedule-row:first-child {
+  border-top: 0;
+}
+
+.schedule-kind {
+  font-weight: 700;
+}
+
+.schedule-toggle {
+  margin-top: 8px;
+  min-height: 36px;
+  padding: 4px 10px;
+}
+
+/* Worklist: checkbox and text aligned in a fixed column. */
+.worklist {
+  padding-left: 0;
+  list-style: none;
+}
+
+.worklist-item {
+  display: grid;
+  grid-template-columns: 26px 1fr;
+  align-items: start;
+  gap: 10px;
+  padding: 8px 0;
+}
+
+.worklist-item input[type="checkbox"] {
+  margin: 3px 0 0;
+}
+
+.worklist-item label {
+  display: block;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.worklist-item label.action {
+  color: var(--text);
+}
+
+/* Agreed plan: bulleted rows with editable steps. */
+.plan-bullets {
+  list-style: disc;
+  padding-left: 22px;
+  margin: 6px 0;
+}
+
+.plan-bullets li {
+  margin: 4px 0;
+}
+
+/* Steps use the same disc bullets as the summary list, in both editable and read-only views. */
+.plan-steps {
+  list-style: disc;
+  padding-left: 22px;
+}
+
+.plan-step {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.plan-step-input {
+  flex: 1 1 auto;
+  min-width: 0;
+  min-height: 40px;
+  padding: 6px 10px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  font: inherit;
+}
+
+.plan-step-remove {
+  min-height: 40px;
+}
+
+.plan-steps-label {
+  margin: 10px 0 4px;
+  font-weight: 600;
+}
+
+.plan-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+/* v3: coordinator layout. Worklist sits top-left; stacks on phones. */
+.coordinator-grid {
+  display: grid;
+  gap: 16px;
+  align-items: start;
+}
+
+@media (min-width: 900px) {
+  .coordinator-grid {
+    grid-template-columns: minmax(260px, 1fr) minmax(0, 2fr);
+  }
+}
+
+.coordinator-left {
+  min-width: 0;
+}
+
+.coordinator-right {
+  min-width: 0;
+}
+
+.worklist-card {
+  position: sticky;
+  top: 12px;
+}
+
+@media (max-width: 899px) {
+  .worklist-card {
+    position: static;
+  }
+}
+
+.worklist-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.worklist-item input[type="checkbox"] {
+  width: 22px;
+  height: 22px;
+  min-width: 22px;
+  margin: 2px 0 0;
+  cursor: pointer;
+}
+
+.worklist-item label {
+  margin: 0;
+  font-weight: 600;
+  cursor: pointer;
+  overflow-wrap: anywhere;
+}
+
+.worklist-item.done label {
+  text-decoration: line-through;
+  color: var(--muted);
+}
+
+.schedule {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.schedule-row {
+  display: grid;
+  gap: 2px;
+  padding: 10px 8px;
+  border-top: 1px solid var(--line);
+}
+
+.schedule-row.current {
+  background: var(--accent-blue);
+  border-left: 4px solid var(--primary);
+}
+
+.schedule-row:first-child {
+  border-top: 0;
+}

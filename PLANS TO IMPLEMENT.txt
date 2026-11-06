@@ -1,0 +1,44 @@
+PLANS TO IMPLEMENT:
+
+Rough Draft: 
+____________
+Pill alternatives that are based on age: 
+
+Patients 10 and under have a PEZ-like pill dispenser to make it more fun and less clinical.
+
+PHONE CASE ATTACHMENT PLANS:
+
+Both patients and caregivers are given the option to have a silicone based adherent phonecase attachment that features a hard portion in the center for storing pills. The pill container acts as a small, feature rich device that operates as an IoT device. The container holds the pills with a springloaded mechanism and a physical stop barrier on the other side to stop pills from flying out. The spring loaded mechanism featrues a spring tension guage to measure how many pills are in the container at given moment. This allows for the device to ultimately detect whether or not a pill was taken (when it should have been, and vice versa). This device would connect to a singular phone (1:1), and communicate over the internet (this is health so we need to make sure information is encrypted). This would mean that connection to container device would have to configured in app. The container device will utilze impact and waterproof resistant technologies and designs. 
+
+
+We want to include an app that logs information revolving around medication adherence levels, this would include the timing of adherence/non-adherence (in the hopes to draw patterns), as well as other features based on future feedback. This information would be logged and abstracted away from the user, but sent and stored to coordinators, reporting it back to coordinators in a parsed, summarized format outlining flagged data. 
+
+
+Utilizing patient-specific configurations (app accepts configuration information via code provided by coordinator, so patients can't adjust information)(i.e. when to take pill), the app will query the container device, to detect whether or not a pill was taken recently enough. If yes, then a text notification will be sent congratulating the user (positive reinforcement) If not, the container device apply a distinct vibration. After a short amount of time (e.g. 5 min), the app will query the device again. If a pill hasn't been taken, a different distinct vibration will occur and a text message will be sent to the connected phone reminding them to take the pill. This process will repeat until eventually it's gone on for a 'long time', at which point an alarming text message will be sent to that phone and caregiver (if applicable), will be notified as well. Coordinnators will see a specific flag for this event in the next log.
+
+
+IMPROVE DESCRIPTION:
+___________
+### Optional phone-case pill attachment
+
+- Offer patients and caregivers an optional silicone phone-case attachment with a pill-storage compartment.
+- The compartment would use a spring-loaded mechanism and physical stop to control pill release, with a tension gauge to estimate how many pills remain.
+- The device would use impact-resistant and waterproof-resistant design features.
+- Pair the device with one phone. Configure the connection in the app and encrypt data transmitted over the internet.
+
+### Adherence tracking and coordinator summaries
+
+- Log medication-taking events and their timing to help identify adherence patterns.
+- Keep routine tracking unobtrusive for the patient. Send coordinators concise summaries that highlight events needing attention.
+- Allow coordinators to provide patient-specific medication schedules through a code. Patients cannot edit those schedules.
+
+### Reminder and escalation flow
+
+1. At a scheduled medication time, the app checks whether the container indicates that a dose was taken.
+2. If it was, send the patient a positive message.
+3. If it wasn’t, vibrate the device distinctly.
+4. After a short interval—such as five minutes—check again. If the dose still appears untaken, use a different vibration and send a reminder message.
+5. If the event continues beyond a defined threshold, send an escalation message to the patient and notify their caregiver, if applicable.
+6. Flag the event in the coordinator’s next summary.
+
+

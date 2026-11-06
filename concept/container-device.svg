@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" role="img" aria-labelledby="t d">
+  <title id="t">Concept: phone-case pill container</title>
+  <desc id="d">Concept illustration of a silicone phone case with a central pill module, and a cutaway showing spring, stop barrier, and count gauge. Not a working device.</desc>
+  <defs>
+    <linearGradient id="case" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#cfeaec"/>
+      <stop offset="1" stop-color="#9fd0d4"/>
+    </linearGradient>
+    <linearGradient id="pod" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2a8a90"/>
+      <stop offset="1" stop-color="#155359"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="960" height="540" fill="#f5f7f8"/>
+  <text x="40" y="44" font-family="system-ui, sans-serif" font-size="20" font-weight="700" fill="#1f2933">Phone-case pill container (concept)</text>
+  <text x="40" y="66" font-family="system-ui, sans-serif" font-size="13" fill="#5b6670">Illustration only. Not a working device. Pill sensing, connectivity, and durability are unproven.</text>
+
+  <!-- Left: rear view of phone in silicone case with pill module -->
+  <text x="40" y="100" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="#1f2933">Rear view, attached</text>
+  <rect x="268" y="110" width="264" height="390" rx="42" fill="url(#case)" stroke="#1d6f75" stroke-width="3"/>
+  <rect x="290" y="132" width="220" height="346" rx="30" fill="#2b333b"/>
+  <rect x="312" y="150" width="78" height="78" rx="18" fill="#3a444e"/>
+  <circle cx="335" cy="173" r="13" fill="#11161b"/>
+  <circle cx="368" cy="173" r="13" fill="#11161b"/>
+  <circle cx="335" cy="206" r="13" fill="#11161b"/>
+  <rect x="330" y="300" width="100" height="150" rx="16" fill="url(#pod)"/>
+  <rect x="342" y="316" width="76" height="90" rx="10" fill="#e6f4f5" opacity="0.92"/>
+  <circle cx="356" cy="332" r="9" fill="#f2b84b"/>
+  <circle cx="376" cy="332" r="9" fill="#f2b84b"/>
+  <circle cx="396" cy="332" r="9" fill="#f2b84b"/>
+  <circle cx="356" cy="352" r="9" fill="#f2b84b"/>
+  <circle cx="376" cy="352" r="9" fill="#f2b84b"/>
+  <circle cx="396" cy="352" r="9" fill="#f2b84b"/>
+  <circle cx="356" cy="372" r="9" fill="#f2b84b"/>
+  <circle cx="376" cy="372" r="9" fill="#f2b84b"/>
+  <circle cx="396" cy="372" r="9" fill="#f2b84b"/>
+  <circle cx="356" cy="392" r="9" fill="#f2b84b"/>
+  <circle cx="376" cy="392" r="9" fill="#f2b84b"/>
+  <circle cx="396" cy="392" r="9" fill="#f2b84b"/>
+  <rect x="436" y="318" width="8" height="86" rx="4" fill="#c9d3d8"/>
+  <rect x="436" y="318" width="8" height="30" rx="4" fill="#1d6f75"/>
+  <text x="250" y="520" font-family="system-ui, sans-serif" font-size="13" fill="#5b6670">Pill module shown in teal; count window and gauge on right edge.</text>
+
+  <!-- Right: cutaway of standalone module -->
+  <text x="560" y="100" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="#1f2933">Module cutaway</text>
+  <rect x="560" y="120" width="340" height="200" rx="20" fill="#e6eef0" stroke="#5b6670" stroke-width="2"/>
+  <rect x="590" y="150" width="200" height="140" rx="10" fill="#ffffff" stroke="#8a97a1" stroke-width="2"/>
+  <circle cx="615" cy="180" r="14" fill="#f2b84b"/>
+  <circle cx="650" cy="180" r="14" fill="#f2b84b"/>
+  <circle cx="685" cy="180" r="14" fill="#f2b84b"/>
+  <circle cx="720" cy="180" r="14" fill="#f2b84b"/>
+  <circle cx="755" cy="180" r="14" fill="#f2b84b"/>
+  <circle cx="615" cy="210" r="14" fill="#f2b84b"/>
+  <circle cx="650" cy="210" r="14" fill="#f2b84b"/>
+  <circle cx="685" cy="210" r="14" fill="#f2b84b"/>
+  <circle cx="720" cy="210" r="14" fill="#f2b84b"/>
+  <circle cx="755" cy="210" r="14" fill="#f2b84b"/>
+  <circle cx="615" cy="240" r="14" fill="#f2b84b"/>
+  <circle cx="650" cy="240" r="14" fill="#f2b84b"/>
+  <circle cx="685" cy="240" r="14" fill="#f2b84b"/>
+  <circle cx="720" cy="240" r="14" fill="#f2b84b"/>
+  <circle cx="755" cy="240" r="14" fill="#f2b84b"/>
+  <circle cx="615" cy="270" r="14" fill="#f2b84b"/>
+  <circle cx="650" cy="270" r="14" fill="#f2b84b"/>
+  <circle cx="685" cy="270" r="14" fill="#f2b84b"/>
+  <circle cx="720" cy="270" r="14" fill="#f2b84b"/>
+  <circle cx="755" cy="270" r="14" fill="#f2b84b"/>
+  <rect x="580" y="150" width="12" height="140" rx="3" fill="#b42318"/>
+  <path d="M 810 240 l 10 -12 l 10 24 l 10 -24 l 10 24 l 10 -24 l 10 24 l 10 -24 l 10 12" fill="none" stroke="#1d6f75" stroke-width="3" stroke-linejoin="round"/>
+  <rect x="800" y="160" width="12" height="120" rx="4" fill="#8a97a1"/>
+  <text x="560" y="350" font-family="system-ui, sans-serif" font-size="12" fill="#5b6670">Red: stop barrier (stops pills leaving the chamber).</text>
+  <text x="560" y="368" font-family="system-ui, sans-serif" font-size="12" fill="#5b6670">Zigzag: spring-loaded plunger with tension gauge.</text>
+  <text x="560" y="386" font-family="system-ui, sans-serif" font-size="12" fill="#5b6670">Yellow: pills in chamber (count estimated from spring tension).</text>
+</svg>
